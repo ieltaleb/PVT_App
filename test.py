@@ -1,17 +1,20 @@
 import streamlit as st
+import CoolProp.CoolProp as CP
 
-# Title
-st.title("My Streamlit App")
 
-# Sidebar with widgets
-user_input = st.sidebar.text_input("Enter your name:")
-st.sidebar.button("Say Hello")
+def main():
+    st.title("CoolProp Streamlit App")
 
-# Main content
-st.write(f"Hello, {user_input}!")
+    # Example usage of CoolProp
+    fluid = "Water"
+    temperature = 300  # in Kelvin
+    pressure = 101325  # in Pa
 
-# Data visualization
-import pandas as pd
+    density = CP.PropsSI("D", "T", temperature, "P", pressure, fluid)
+    st.write(
+        f"Density of {fluid} at {temperature} K and {pressure} Pa: {density} kg/m³"
+    )
 
-df = pd.DataFrame({"x": [1, 2, 3], "y": [10, 20, 30]})
-st.line_chart(df)
+
+if __name__ == "__main__":
+    main()
