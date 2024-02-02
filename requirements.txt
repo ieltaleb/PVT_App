@@ -33,6 +33,7 @@ charset-normalizer=2.0.4=pyhd3eb1b0_0
 click=8.1.7=py39haa95532_0
 colorama=0.4.6=py39haa95532_0
 comm=0.1.2=py39haa95532_0
+coolprop=6.6.0=pypi_0
 cryptography=41.0.7=py39h89fc84f_0
 debugpy=1.6.7=py39hd77b12b_0
 decorator=5.1.1=pyhd3eb1b0_0
@@ -188,5 +189,3 @@ zeromq=4.3.5=hd77b12b_0
 zipp=3.17.0=py39haa95532_0
 zlib=1.2.13=h8cc25b3_0
 zstd=1.5.5=hd43e919_0
-CoolProp==6.6.0  
-
